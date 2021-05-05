@@ -36,8 +36,9 @@ export const HeroSection = styled.div`
     margin-top: 1rem;
     display: flex;
     flex-direction: column-reverse;
-    overflow: none;
+    overflow: hidden;
     text-align: center;
+    padding-bottom: 2rem;
 
     h1 {
       color: hsl(255, 11%, 22%);

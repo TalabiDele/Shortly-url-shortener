@@ -11,6 +11,13 @@ export const BtnSm = styled.a`
   li {
     color: white;
   }
+
+  @media (max-width: 375px) {
+    width: 13rem;
+    height: 3rem;
+    padding: 0.6rem;
+    margin-top: -1rem;
+  }
 `;
 
 export const BtnBgRound = styled.a`

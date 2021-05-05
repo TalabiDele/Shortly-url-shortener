@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Nav = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  align-items: center;
+  width: 90%;
   margin: 2rem auto 0 auto;
 `;
 
@@ -11,10 +12,20 @@ export const NavFlex = styled.div`
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  margin-left: 1rem;
 
   a {
     color: hsl(0, 0%, 75%);
     font-size: 18px;
+  }
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    margin-left: 0;
+
+    a {
+      color: white;
+    }
   }
 `;
 
@@ -33,5 +44,52 @@ export const Hamburger = styled.div`
 
   @media (max-width: 375px) {
     display: flex;
+  }
+`;
+
+export const Mobile = styled.div`
+  @media (max-width: 375px) {
+    /* display: flex; */
+  }
+`;
+
+export const MobileFlex = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  .split {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+
+    .first {
+      border-bottom: 0.5px solid hsl(0, 0%, 75%);
+      padding-bottom: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+`;
+
+export const MobileMenu = styled.div`
+  @media (max-width: 375px) {
+    flex-direction: column;
+    position: absolute;
+    justify-items: center;
+    top: 6rem;
+    background-color: hsl(257, 27%, 26%);
+    font-weight: bold;
+    width: 20rem;
+    padding: 3rem;
+    margin: auto;
+    bottom: 23rem;
+    right: 0;
+    left: 0;
+    border-radius: 15px;
+    opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
+    transition: all 0.3s ease-in;
   }
 `;

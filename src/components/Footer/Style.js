@@ -26,7 +26,7 @@ export const FooterStyle = Styled.footer`
   }
 
   @media (max-width: 375px) {
-    top: 146.6rem;
+    top: 148.6rem;
     bottom: 0;
     height: 40rem;
     grid-template-columns: repeat(1, 1fr);
