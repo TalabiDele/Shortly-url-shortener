@@ -15,7 +15,6 @@ const Navbar = () => {
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
-    console.log(isOpen);
   };
 
   return (

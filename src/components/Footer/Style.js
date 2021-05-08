@@ -19,10 +19,17 @@ export const FooterStyle = Styled.footer`
 
   a {
     color: hsl(0, 0%, 75%);
+    transition: all 0.2s ease-in-out;
+
+      &:hover {
+      color: hsl(180, 66%, 49%);
+      transition: all 0.2s ease-in-out;
+    }
   }
 
   img {
     margin: 0 1rem;
+    transition: all 0.2s ease-in-out;
   }
 
   @media (max-width: 375px) {

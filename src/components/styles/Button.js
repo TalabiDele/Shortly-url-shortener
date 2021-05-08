@@ -7,6 +7,12 @@ export const BtnSm = styled.a`
   width: 6rem;
   text-align: center;
   padding: 0.2rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out;
+  }
 
   li {
     color: white;
@@ -28,6 +34,12 @@ export const BtnBgRound = styled.a`
   text-align: center;
   padding: 0.5rem 2rem;
   font-size: 18px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export const BtnBg = styled.a`
@@ -38,6 +50,12 @@ export const BtnBg = styled.a`
   text-align: center;
   padding: 1.5rem 2rem;
   font-size: 18px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out;
+  }
 
   @media (max-width: 375px) {
     width: 18rem;

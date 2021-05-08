@@ -17,6 +17,12 @@ export const NavFlex = styled.div`
   a {
     color: hsl(0, 0%, 75%);
     font-size: 18px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: #000000;
+      transition: all 0.2s ease-in-out;
+    }
   }
 
   @media (max-width: 375px) {
@@ -75,6 +81,10 @@ export const MobileFlex = styled.div`
 `;
 
 export const MobileMenu = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 75rem;
+
   @media (max-width: 375px) {
     flex-direction: column;
     position: absolute;
@@ -89,7 +99,9 @@ export const MobileMenu = styled.div`
     right: 0;
     left: 0;
     border-radius: 15px;
+    height: ${({ isOpen }) => (isOpen ? "21rem" : "0rem")};
     opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
     transition: all 0.3s ease-in;
+    overflow: hidden;
   }
 `;
