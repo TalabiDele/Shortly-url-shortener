@@ -8,6 +8,7 @@ export const BtnSm = styled.a`
   text-align: center;
   padding: 0.2rem;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.7;
