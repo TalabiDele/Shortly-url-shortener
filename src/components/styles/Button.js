@@ -43,7 +43,7 @@ export const BtnBgRound = styled.a`
   }
 `;
 
-export const BtnBg = styled.a`
+export const BtnBg = styled.button`
   background-color: hsl(180, 66%, 49%);
   color: white;
   border-radius: 10px;

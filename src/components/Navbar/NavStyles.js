@@ -12,7 +12,8 @@ export const NavFlex = styled.div`
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  margin-left: 1rem;
+  /* margin: auto;
+  width: 90%; */
 
   a {
     color: hsl(0, 0%, 75%);
@@ -62,6 +63,8 @@ export const Mobile = styled.div`
 export const MobileFlex = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 90%;
+  margin: auto;
 
   .split {
     display: flex;
@@ -83,7 +86,8 @@ export const MobileFlex = styled.div`
 export const MobileMenu = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 75rem;
+  width: 90%;
+  margin: auto;
 
   @media (max-width: 375px) {
     flex-direction: column;
@@ -95,7 +99,7 @@ export const MobileMenu = styled.div`
     width: 20rem;
     padding: 3rem;
     margin: auto;
-    bottom: 23rem;
+    bottom: 38rem;
     right: 0;
     left: 0;
     border-radius: 15px;

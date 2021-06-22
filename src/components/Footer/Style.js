@@ -5,11 +5,8 @@ export const FooterStyle = Styled.footer`
   grid-template-columns: repeat(5, 1fr);
   background-color: hsl(255, 11%, 22%);
   padding: 2rem 5rem;
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: 107.5rem;  
-
-  
 
   h1 {
     color: white;
@@ -33,7 +30,6 @@ export const FooterStyle = Styled.footer`
   }
 
   @media (max-width: 375px) {
-    top: 148.6rem;
     bottom: 0;
     height: 40rem;
     grid-template-columns: repeat(1, 1fr);

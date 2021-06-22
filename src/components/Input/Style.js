@@ -42,3 +42,10 @@ export const Shorten = styled.div`
     }
   }
 `;
+
+export const Inp = styled.div`
+  background-color: hsl(0, 0%, 91.37254901960785%);
+  position: relative;
+  top: 6rem;
+  bottom: 10rem;
+`;

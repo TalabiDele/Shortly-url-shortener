@@ -1,53 +1,56 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import useLocalStorage from "../hooks/useLocalStorage";
 import { BtnBg } from "../styles/Button";
-import { Shorten } from "./Style";
+import { Shorten, Inp } from "./Style";
 import UrlLinks from "../UrlLinks/UrlLinks";
 
 const Input = () => {
   const [searchUrl, setSearchUrl] = useState("");
   const [url, setUrl] = useState({});
-  const [query, setQuery] = useState("");
-  const [urlLists, setUrlLists] = useState([]);
+  const [urlLists, setUrlLists] = useLocalStorage("urls", []);
 
-  useEffect(() => {
-    getUrl();
-  }, [query]);
+  // useEffect(() => {
+  //   getUrl();
+  // }, [query]);
 
-  const getUrl = async () => {
-    const response = await axios.get(
-      `https://api.shrtco.de/v2/shorten?url=${query}/very/long/link.html`
+  const getUrl = async (urlText) => {
+    console.log(`${urlText} is available`);
+    const response = await fetch(
+      `https://api.shrtco.de/v2/shorten?url=${urlText}/very/long/link.html`
     );
-    setUrl(response.data.result);
-  };
-
-  const getQueryUrl = (e) => {
-    e.preventDefault();
-    setQuery(searchUrl);
-    setUrlLists([url]);
+    const data = await response.json();
+    setUrlLists([...urlLists, data.result]);
+    console.log(urlLists);
   };
 
   return (
-    <div>
+    <Inp>
       <Shorten>
-        <input
-          placeholder="shorten a link here..."
-          type="text"
-          value={searchUrl}
-          onChange={(e) => setSearchUrl(e.target.value)}
-        />
-        <BtnBg href="#" onClick={getQueryUrl}>
-          Shorten it!
-        </BtnBg>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            getUrl(searchUrl);
+          }}
+        >
+          <input
+            placeholder="shorten a link here..."
+            type="text"
+            value={searchUrl}
+            onChange={(e) => {
+              setSearchUrl(e.target.value);
+            }}
+          />
+          <BtnBg type="submit">Shorten it!</BtnBg>
+        </form>
       </Shorten>
       {urlLists.map((urlList) => (
         <UrlLinks
-          key={urlList.code}
+          key={urlList}
           url={urlList.original_link}
           shortenedUrl={urlList.full_short_link}
         />
       ))}
-    </div>
+    </Inp>
   );
 };
 

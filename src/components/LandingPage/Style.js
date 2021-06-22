@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 export const HeroSection = styled.div`
   @media (min-width: 1440px) {
-    /* width: 80%; */
+    width: 90%;
     display: flex;
-    margin: 3rem 0 auto;
+    margin: 3rem auto auto auto;
     align-items: center;
     overflow: hidden;
 
     div {
       width: 40%;
-      margin-left: 9.5rem;
+      /* margin: auto; */
+      margin-left: 5rem;
     }
 
     h1 {
