@@ -91,9 +91,9 @@ export const MobileMenu = styled.div`
 
   @media (max-width: 375px) {
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     justify-items: center;
-    top: 6rem;
+    /* top: 6rem; */
     background-color: hsl(257, 27%, 26%);
     font-weight: bold;
     width: 20rem;
@@ -107,5 +107,6 @@ export const MobileMenu = styled.div`
     opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
     transition: all 0.3s ease-in;
     overflow: hidden;
+    z-index: 100;
   }
 `;
