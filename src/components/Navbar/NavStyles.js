@@ -93,11 +93,11 @@ export const MobileMenu = styled.div`
     flex-direction: column;
     position: fixed;
     justify-items: center;
-    /* top: 6rem; */
+    top: 5rem;
     background-color: hsl(257, 27%, 26%);
     font-weight: bold;
     width: 20rem;
-    padding: 3rem;
+    padding: 2rem;
     margin: auto;
     /* bottom: 38rem; */
     right: 0;
