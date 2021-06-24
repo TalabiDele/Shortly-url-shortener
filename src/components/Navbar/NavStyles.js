@@ -99,7 +99,7 @@ export const MobileMenu = styled.div`
     width: 20rem;
     padding: 3rem;
     margin: auto;
-    bottom: 38rem;
+    /* bottom: 38rem; */
     right: 0;
     left: 0;
     border-radius: 15px;
