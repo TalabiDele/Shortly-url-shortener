@@ -20,11 +20,6 @@ const Navbar = () => {
   return (
     <Mobile>
       <Nav>
-        <Hamburger onClick={handleOpen}>
-          <span />
-          <span />
-          <span />
-        </Hamburger>
         <MobileFlex>
           <div>
             <a href="#">
@@ -55,6 +50,11 @@ const Navbar = () => {
             </NavFlex>
           </MobileMenu>
         </MobileFlex>
+        <Hamburger onClick={handleOpen}>
+          <span />
+          <span />
+          <span />
+        </Hamburger>
       </Nav>
     </Mobile>
   );
