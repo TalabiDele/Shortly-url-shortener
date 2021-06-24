@@ -4,7 +4,8 @@ export const FlexDisplay = Styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 80%;
-  margin: 5rem auto 8rem auto;
+  margin: 5rem auto 0rem auto;
+  padding-bottom: 8rem;
 
   @media (max-width: 375px) {
     grid-template-columns: repeat(1, 1fr);
@@ -66,7 +67,7 @@ export const Line = Styled.div`
   position: absolute;
   left: 20rem;
   right: 0;
-  bottom: 16rem;
+  bottom: 15rem;
   z-index: -1;
 
   @media (max-width: 375px) {

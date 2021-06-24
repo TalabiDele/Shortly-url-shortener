@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import { BtnSm } from "../styles/Button";
+import { BtnPrimary } from "../styles/Button";
 import { UrlList, MainUrl, ShortenedUrl } from "./Style";
 import copy from "copy-to-clipboard";
 
 const UrlLinks = ({ url, shortenedUrl }) => {
   // const [copyText, setCopyText] = useState("");
+  const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = () => {
     copy(shortenedUrl);
-    alert("Shortened Url Copied");
+    setIsCopied(!isCopied);
   };
 
   return (
@@ -16,7 +17,9 @@ const UrlLinks = ({ url, shortenedUrl }) => {
       <MainUrl>{url}</MainUrl>
       <div>
         <ShortenedUrl>{shortenedUrl}</ShortenedUrl>
-        <BtnSm onClick={handleCopy}>Copy!</BtnSm>
+        <BtnPrimary onClick={handleCopy} isCopied={isCopied}>
+          {isCopied ? "Copied!" : "Copy!"}
+        </BtnPrimary>
       </div>
     </UrlList>
   );

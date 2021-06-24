@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
-import { BtnBg } from "../styles/Button";
+import { BtnSecondary } from "../styles/Button";
 import { Shorten, Inp } from "./Style";
 import UrlLinks from "../UrlLinks/UrlLinks";
 
@@ -40,7 +40,7 @@ const Input = () => {
               setSearchUrl(e.target.value);
             }}
           />
-          <BtnBg type="submit">Shorten it!</BtnBg>
+          <BtnSecondary type="submit">Shorten it!</BtnSecondary>
         </form>
       </Shorten>
       {urlLists.map((urlList) => (

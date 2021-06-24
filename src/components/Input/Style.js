@@ -19,7 +19,7 @@ export const Shorten = styled.div`
     font-size: 18px;
     border-radius: 10px;
     border: none;
-    width: 40rem;
+    width: 60rem;
     font-weight: 500;
     margin-right: 1rem;
   }
